@@ -1,14 +1,17 @@
 <template>
   <h1>VUE 연습</h1>
   <TodoList />
+  <WatchPrac />
 </template>
 
 <script>
 import TodoList from "./components/TodoList.vue";
+import WatchPrac from "./components/WatchPrac.vue";
 export default {
   name: "App",
   components: {
     TodoList,
+    WatchPrac,
   },
 };
 </script>
