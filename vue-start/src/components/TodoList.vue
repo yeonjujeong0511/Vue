@@ -14,7 +14,7 @@
   <button @click="completed = !completed">
     {{ completed ? "모두 보기" : "완성된 것 숨기기" }}
   </button>
-  <h3>{{ msg || "아직 props 없음" }}</h3>
+  <slot></slot>
 </template>
 
 <script>
@@ -47,13 +47,6 @@ export default {
     removeTodo(todo) {
       this.todos = this.todos.filter((t) => t !== todo);
     },
-  },
-  props: {
-    msg: String,
-  },
-  emits: ["response"],
-  created() {
-    this.$emit("response", "자식요소에서 보내욤");
   },
 };
 </script>

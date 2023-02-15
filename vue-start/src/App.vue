@@ -1,6 +1,6 @@
 <template>
   <h1>VUE 연습</h1>
-  <TodoList @response="(msg) => (childMsg = msg)" :msg="gretting" />
+  <TodoList>{{ gretting }}</TodoList>
   <p>{{ childMsg }}</p>
   <WatchPrac />
 </template>
@@ -16,8 +16,7 @@ export default {
   },
   data() {
     return {
-      gretting: "자식요소",
-      childMsg: "아직 없오",
+      gretting: "slot으로 부모데이터 보내기",
     };
   },
 };
