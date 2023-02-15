@@ -1,6 +1,7 @@
 <template>
   <h1>VUE 연습</h1>
-  <TodoList />
+  <TodoList @response="(msg) => (childMsg = msg)" :msg="gretting" />
+  <p>{{ childMsg }}</p>
   <WatchPrac />
 </template>
 
@@ -12,6 +13,12 @@ export default {
   components: {
     TodoList,
     WatchPrac,
+  },
+  data() {
+    return {
+      gretting: "자식요소",
+      childMsg: "아직 없오",
+    };
   },
 };
 </script>
