@@ -29,6 +29,7 @@ export default {
   watch: {
     todoId() {
       this.fethcData();
+      // 반응 속성이 변경될때마다, 함수를 트리거
     },
   },
 };
