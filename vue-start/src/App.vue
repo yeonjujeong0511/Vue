@@ -32,6 +32,7 @@ export default {
     };
   },
 };
+console.log('설정변경 확인')
 </script>
 
 <style>
